@@ -26,5 +26,8 @@
 - [ ] Implement the naive birthday attack of reduced `SM3`
 - [ ] Implement the Rho method of reduced `SM3`
 - [ ] Implement length extension attack for `SM3`, `SHA256`, etc.
+      
 - [ ] Do your best to optimize `SM3` implementation (software)
 - [ ] Implement Merkle Tree following [RFC6962](https://www.rfc-editor.org/info/rfc6962)
+
+      
