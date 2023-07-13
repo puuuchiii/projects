@@ -1,5 +1,12 @@
-# projects
-这里展示了我完成的projects
+# SDU-2022-CryptoProject
+创新创业实践项目
+
+## 小组成员
+
+| 姓名   | 班级          | 学号             | 
+| ------ | ------------- | ----------------| 
+|陈于思 | 2021级密码2班陈于思 | 202100141118 | 
+
 ### SM2
 
 - [ ] Report on the application of this deduce technique in Ethereum with `ECDSA`
