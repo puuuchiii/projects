@@ -11,7 +11,7 @@
 
 ### SM2
 
-- [ ] Report on the application of this deduce technique in Ethereum with `ECDSA`
+- [x] Report on the application of this deduce technique in Ethereum with `ECDSA`
 - [ ] Implement `SM2` with [RFC6979](https://www.rfc-editor.org/info/rfc6979)
 - [ ] Verify the some pitfalls with proof-of-concept code
 - [ ] Implement the above `ECMH` scheme
@@ -23,9 +23,9 @@
 
 ### SM3
 
-- [ ] Implement the naive birthday attack of reduced `SM3`
-- [ ] Implement the Rho method of reduced `SM3`
-- [ ] Implement length extension attack for `SM3`, `SHA256`, etc.
+- [x] Implement the naive birthday attack of reduced `SM3`
+- [x] Implement the Rho method of reduced `SM3`
+- [x] Implement length extension attack for `SM3`, `SHA256`, etc.
       
 - [ ] Do your best to optimize `SM3` implementation (software)
 - [ ] Implement Merkle Tree following [RFC6962](https://www.rfc-editor.org/info/rfc6962)
