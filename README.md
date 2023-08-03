@@ -17,9 +17,9 @@
 - [ ] Implement the above `ECMH` scheme
 - [ ] Implement a `PGP` scheme with `SM2`
 
-- [ ] Implement `SM2` 2P sign with real network communication
+- [x] Implement `SM2` 2P sign with real network communication
 - [ ] Implement `SM2` 2P decrypt with real network communication
-- [ ] PoC impl of the scheme, or do implement analysis by Google
+- [x] 比较Firefox和谷歌的记住密码插件的实现区别
 
 ### SM3
 
@@ -27,7 +27,7 @@
 - [x] Implement the Rho method of reduced `SM3`
 - [x] Implement length extension attack for `SM3`, `SHA256`, etc.
       
-- [ ] Do your best to optimize `SM3` implementation (software)
+- [x] Do your best to optimize `SM3` implementation (software)
 - [ ] Implement Merkle Tree following [RFC6962](https://www.rfc-editor.org/info/rfc6962)
 
       
