@@ -19,4 +19,4 @@ Python
 ### 结果：
 
 这里以实现SM3生日攻击的前20位碰撞为例：
-![输入图片说明](/imgs/2023-07-30/hnyTNzDYmSguRQ1I.jpeg)
+![输入图片说明](https://github.com/puuuchiii/projects/blob/main/project1/1.jpg)
