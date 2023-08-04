@@ -8,7 +8,7 @@
 
 本项目的优化主要体现在SM3的消息扩展部分，即如下：
 
-![输入图片说明](/imgs/2023-08-02/UHWAhmdqsKWRPz2X.png)
+![图片](https://github.com/puuuchiii/projects/blob/main/project%20%204/image/11.png)
 
 在运算W[0]—W[15]的过程中，运用了for循环展开来进行优化，如下：
 
@@ -118,10 +118,19 @@ _mm_storeu_si128((__m128i*)(W1 + j), c);
 }
 ```
 
-![输入图片说明](/imgs/2023-08-02/uS1dCAO71AuY4sXC.png)
+![图片](https://github.com/puuuchiii/projects/blob/main/project%20%204/image/4.png)
 
-实现：
+##实现：
 
 本项目用c++完成。
 
-![输入图片说明](/imgs/2023-08-02/GP3AZLprIC0KR6Sg.png)
+
+##结果：
+
+
+优化前：
+![图片](https://github.com/puuuchiii/projects/blob/main/project%20%204/image/5.png)
+
+
+优化后：
+![图片](https://github.com/puuuchiii/projects/blob/main/project%20%204/image/6.png)
