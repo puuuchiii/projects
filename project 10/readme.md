@@ -32,4 +32,6 @@ ECDSA的安全性建立在椭圆曲线离散对数难题的困难性上，该难
 4.  验证等式：r1 ≡ r (mod n)。
 5.  如果等式成立，则接受签名；否则，签名无效。
 
+### 实验结果：
+![图片](https://github.com/puuuchiii/projects/blob/main/project%2010/image/4.png)
 
