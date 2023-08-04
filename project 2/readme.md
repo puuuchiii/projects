@@ -16,7 +16,8 @@ Python
 
 结果：
 
+![图片](https://github.com/puuuchiii/projects/blob/main/project%202/image/3.png)
 以实现前40位的Rho攻击为例：
-
+![图片](https://github.com/puuuchiii/projects/blob/main/project%202/image/4.png)
 
 
