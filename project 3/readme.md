@@ -6,7 +6,7 @@
 
 SM3的消息长度是64字节或者它的倍数，如果消息的长度不足则需要pad。SM3的填充规则：
 
-<![if !vml]>![IMG_256](file:///C:/Windows/TEMP/msohtmlclip1/01/clip_image002.gif)<![endif]>
+![图片](https://github.com/puuuchiii/projects/blob/main/project%203/image/3.png)
 
 ### 本项目实现步骤：
 
