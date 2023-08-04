@@ -11,6 +11,10 @@ ECDSA包含三个主要的算法：密钥生成算法（Key Generation），签�
 ECDSA的安全性建立在椭圆曲线离散对数难题的困难性上，该难题在目前的计算能力下被认为是不可解的。因此，ECDSA成为了许多应用领域中的常用数字签名算法，如加密货币、数字证书、安全通信等。
 
 ### **二、ECC的实现**
+
+![图片](https://github.com/puuuchiii/projects/blob/main/project%2010/image/3.png)
+
+
 **签名过程：**
 
 1.  选择一条椭圆曲线Ep(a, b)和基点G。
