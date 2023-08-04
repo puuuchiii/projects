@@ -5,12 +5,12 @@
 ### 典型登录流程
 
 互联网服务的典型登录流程是将您的用户名和密码发送到服务器，在那里他们对其进行哈希处理，将其与存储的哈希进行比较，如果正确，服务器将向您发送您的数据。
-![输入图片说明](/imgs/2023-08-02/qyG1h4OehDY0aeRA.png)
+![图片](https://github.com/puuuchiii/projects/blob/main/project%2017/image/1.png)
 
 
 
 Firefox 帐户和 Firefox Sync（我们的底层同步服务）的方式差异在于，您从不向我们发送密码。我们将您计算机上的密码转换为两个不同的、不相关的值。使用一个值，则无法派生另一个值[0]我们将派生自您的密码的身份验证令牌作为等效密码发送到服务器。从密码短语派生的加密密钥永远不会离开您的计算机。
-![输入图片说明](/imgs/2023-08-02/g1f6GLwuCv3HWw1w.png)
+![图片](https://github.com/puuuchiii/projects/blob/main/project%2017/image/2.png)
 ### PBKDF2的工作流程
 
 PBKDF2实际上就是将伪散列函数PRF（pseudorandom function）应用到输入的密码、salt中，生成一个散列值，然后将这个散列值作为一个加密key，应用到后续的加密过程中，以此类推，将这个过程重复很多次，从而增加了密码破解的难度，这个过程也被称为是密码加强。
