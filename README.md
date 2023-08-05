@@ -13,11 +13,43 @@
 
 - [x] Implement the naive birthday attack of reduced `SM3`
 
+      项目要求实现SM3的生日攻击.
+      本项目首先用python实现了SM3算法，然后定义了Birthday_Attack函数，参数n为攻击的目标位数，表示要实现SM3生日攻击的前n位碰撞。
+
+      在函数内，使用for循环枚举所有可能的输入a1和a2（0到2^n之间的随机整数）。
+      将a1和a2转换为字符串，并计算其对应的哈希值c1和c2。取c1和c2的前n/4位作为比较值（因为c1、c2的一位为一个字节，所以n/4为一位）。
+      如果c1和c2相等，且a1不等于a2，则表示找到了碰撞，打印攻击成功信息，输出a1、c1、a2和c2，并结束循环。
+      如果循环结束时没有找到碰撞，则攻击失败。
+
+      项目最后展示了攻击的结果，具体结果见project1 readme.md
+
       
 - [x] Implement the Rho method of reduced `SM3`
+      
+      Rho攻击是一种碰撞攻击，旨在找到两个不同的输入消息，经过SM3哈希后具有相同的哈希值。
+
+      Rho攻击基于哈希函数的性质和哈希碰撞的概率。
+      它通过不断迭代初始输入，使用哈希函数生成下一个输入，然后检查生成的哈希值是否与之前的某个哈希值相同。
+      如果发现两个不同的输入生成了相同的哈希值，那么就找到了一个碰撞，即两个输入具有相同的哈希值。
+
+      在SM3的Rho攻击中，通常使用的迭代函数是 a = 2*a + 1，
+      然后将 a 输入到SM3哈希函数中进行计算。
+      通过不断迭代生成输入并计算哈希值，攻击者希望找到具有相同哈希值的两个不同的输入。
+      项目通过python 实现，具体结果见project 2 readme.md
+
+注意：想要实现前多少位的Rho攻击就把Rho_attck(n)中的n改为多少。
 - [x] Implement length extension attack for `SM3`, `SHA256`, etc.
+
+      本项目实现了SM3的长度扩展攻击。长度扩展攻击即攻击者不知道原始消息a，
+      知道H(a）和a的长度，通过长度扩展攻击，攻击者可以知道H(a+pad+附加消息)。
+      
       
 - [x] Do your best to optimize `SM3` implementation (software)
+      
+      项目通过优化SM3的消息拓展部分，在运算W[0]—W[15]的过程中，运用了for循环展开来进行优化，
+      而在运算W[16]—W[67]的即W1[0]—W1[63]的过程中，运用了SIMD指令集进行优化。
+      
+      项目通过c++实现，优化前所用时间为2063ms,优化后的时间为1672ms.
 - [x] Implement Merkle Tree following [RFC6962](https://www.rfc-editor.org/info/rfc6962)
       
 ### SM2
