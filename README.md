@@ -117,11 +117,41 @@
       在ARM架构的SIMD（单指令多数据）指令集中，AESE（AES single round encryption）表示AES的单轮加密操作，
       其中包括AddRoundKey、SubBytes和ShiftRows。
 - [x] AES / SM4 software implementation
-
+      
+      C++编程实现ECDSA签名方案的一个伪造。如果已知中本聪的公钥，同理可以忽略私钥，仅仅通过已有签名和公钥实现存在性伪造。
+      具体结果见project 19 的 readme.md
 ### Application
 - [x] send a tx on Bitcoin testnet, and parse the tx data down to every bit, better write script yourself
 - [x] forge a signature to pretend that you are Satoshi
 
       
 - [x] Schnorr Bacth
+
+      Schnorr Signature实现方法
+      ·Key Generation 
+      
+      ·P-dG 
+      
+      ·Sign on given message M 
+      
+      · randomiy k,1et R=kG e-hash(RIIM) 
+      
+      ·s=k+ed mod n 
+      
+      ·Signature is:(R,s) 
+      
+      ·Verify (R,s) of Mwith P 
+      
+      ·Check sG vs R+eP sG=(k+ed)G-kG+edG-R+eP
+      本项目使用C++编程实现 首先根据以上签名方案实现基础的Schnorr 签名。 然后根据老师PPT中方法，实现批量验签
 - [x] research report on MPT
+
+      以上介绍的MPT树，可以用来存储内容为任何长度的key-value数据项。倘若数据项的key长度没有限制时，当树中维护的数据量较大时，仍然会造成整棵树的深度变得越来越深，会造成以下影响：
+
+      1.查询一个节点可能会需要许多次IO读取，效率低下
+      
+      2.系统易遭受Dos攻击，攻击者可以通过在合约中存储特定的数据，“构造”一棵拥有一条很长路径的树，然后不断地调用SLOAD指令读取该树节点的内容，造成系统执行效率极度下降
+      
+      3.所有的key其实是一种明文的形式进行存储
+      
+      为了解决以上问题，在以太坊中对MPT再进行了一次封装，对数据项的key进行了一次哈希计算，因此最终作为参数传入到MPT接口的数据项其实是 (sha3(key), value)
