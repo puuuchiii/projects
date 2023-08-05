@@ -3,12 +3,19 @@
 ### Schnorr Signature实现方法
 
 ·Key Generation 
+
 ·P-dG 
+
 ·Sign on given message M 
+
 · randomiy k,1et R=kG e-hash(RIIM) 
+
 ·s=k+ed mod n 
+
 ·Signature is:(R,s) 
+
 ·Verify (R,s) of Mwith P 
+
 ·Check sG vs R+eP sG=(k+ed)G-kG+edG-R+eP
 
 本项目使用C++编程实现
