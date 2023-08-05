@@ -51,7 +51,14 @@
       
       项目通过c++实现，优化前所用时间为2063ms,优化后的时间为1672ms.
 - [x] Implement Merkle Tree following [RFC6962](https://www.rfc-editor.org/info/rfc6962)
-      
+
+      假设要检查 H 节点是否在这棵树中，那么我们需要 TH，HG，HEF，HABCD，HABCDEFGH，这些节点的哈希值。
+      然后将 TH通过 hash 函数转换成 HH，接着按照相似的流程 hash(HG, HH)，hash(HGH, HEF), …
+      最终我们只需要比较这一次 hash 的 HABCDEFGH 和区块头中存储的 HABCDEFGH 是否一致即可。
+
+      要证某个元素不在Merkle tree里可以证紧挨着这个元素比这个元素小的和大的都在Merkle tree里,
+      来证明这个元素不在Merkle tree里（比如要证1.5不在Merkle tree里可通过证1和2在Merkle tree里）。
+      本项目由python 实现，证明了点1.5不在建立的mekel树中。      
 ### SM2
 
 - [x] Report on the application of this deduce technique in Ethereum with `ECDSA`
@@ -68,8 +75,12 @@
 
 ### AES
 - [x] AES impl with ARM instruction
-
       
+      在ARMv8架构上使用AES内部函数进行AES加密和解密操作，并利用ARMv8的AES扩展指令来优化AES算法的执行。
+      通过使用C内部函数，可以更方便地访问这些指令，以实现更高效的加密和解密功能。
+
+      在ARM架构的SIMD（单指令多数据）指令集中，AESE（AES single round encryption）表示AES的单轮加密操作，
+      其中包括AddRoundKey、SubBytes和ShiftRows。
 - [x] AES / SM4 software implementation
 
 ### Application
