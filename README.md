@@ -122,8 +122,9 @@
       具体结果见project 19 的 readme.md
 ### Application
 - [x] send a tx on Bitcoin testnet, and parse the tx data down to every bit, better write script yourself
+      比特币测试币是一种用于模拟比特币网络交易的虚拟货币，用于开发和测试新的应用程序和功能。它们没有真实价值，主要在测试网络中使用，这里我们也使用这种测试币进行测试。比特币测试币分为Testnet和Regtest两种类型。Testnet是由比特币社区维护的公共测试网络，可通过水龙头获取。
 - [x] forge a signature to pretend that you are Satoshi
-
+      参考PPT上的方式，通过C++编程实现ECDSA签名方案的一个伪造。如果已知中本聪的公钥，同理可以忽略私钥，仅仅通过已有签名和公钥实现存在性伪造
       
 - [x] Schnorr Bacth
 
